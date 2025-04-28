@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Verificador de media</h1>
+    <p>Digite a sua nota da prova</p>
+    <input type="text" id="numero">
+    <button id="verificarMedia">Verificar</button>
+
+
+    <script>
+
+
+     document.getElementById("verificarMedia").addEventListener("click", function (){
+
+     let nota = document.getElementById("numero").value;
+
+
+     nota = parseInt(nota);
+
+     if(isNaN(nota)){
+        alert("O texto digitado nao é um numero");
+     }else if( nota >= 7){
+        alert("Voce foi aprovado");
+     }else if (nota >=4 && nota < 7){
+        alert("Voce esta de recuperaçao");
+     }else{
+        alert("Voce esta reprovado")
+     }
+
+
+     })
+
+
+    </script>
+</body>
+</html>
